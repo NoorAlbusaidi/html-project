@@ -26,6 +26,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#registration">Registration</a></li>
     </ul>
 
     <!-- About section -->
@@ -81,6 +82,35 @@
         </table>
     </section>
 
+    <section id="registration">
+        <form>
+            <fieldset>
+                <!-- <legend> is the title of the fieldset. -->
+                <legend>Personal Information</legend>
+
+                <!-- Personal fields -->
+                <!--  full Name -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50">
+                <br>
+                <br>
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+                <!-- Age -->
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" minlength="18" maxlength="70">
+            </fieldset>
+
+            <fieldset>
+                <legend>Employment Information</legend>
+
+                <!-- Employment fields go here -->
+            </fieldset>
+        </form>
+    </section>
 </body>
 
 </html>
