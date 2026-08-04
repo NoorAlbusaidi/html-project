@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+    <!--UTF-8 allows your webpage to support almost every language and special character.-->
+    <meta charset="UTF-8">
+    <!--The viewport is the visible area of the webpage in the browser.-->
+    <!--The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).-->
+    <!--The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="top">
+        <h1>Noor Alhuda Al Busaidi</h1>
+        <p>Software Engineer</p>
+    </header>
+
+    <!-- Navigation -->
+    <h3> Services </h3>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="company.html">visit our company page</a></li>
+    </ul>
+
+    <!-- About section -->
+    <section id="about">
+        <img src="noor.jpg" alt="Portrait of Noor Alhuda Al Busaidi" width="200" height="200">
+
+        <p>
+            Hello! I'm <strong>Noor Alhuda Al Busaidi</strong>,
+            a Computer Science graduate passionate about
+            <em>cybersecurity</em> and web development.
+        </p>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>Programming Languages: Python, JavaScript, C++ and C#</li>
+            <li>Web Development: HTML and CSS</li>
+            <li>Cybersecurity: Network Security, Ethical Hacking</li>
+        </ul>
+        <h3>Learning Path</h3>
+        <ol>
+            <li>Week 1: HTML Fundamentals</li>
+            <li>Week 2: CSS Styling</li>
+            <li>Week 3: JavaScript Basics</li>
+            <li>Week 4: Building a Complete Website</li>
+        </ol>
+    </section>
+
+    <!-- Experience section -->
+    <section id="experience">
+        <h3>Experience</h3>
+        <table border="1">
+            <!-- Every row begins with <tr=table row> and ends with </tr> -->
+            <tr>
+                <!-- Table headers -->
+                <th scope="col">Company</th>
+                <th scope="col">Role</th>
+                <th scope="col">Duration</th>
+            </tr>
+            <tr>
+                <!-- Table data -->
+                <td>Tech Solutions Inc.</td>
+                <td>Software Engineer Intern</td>
+                <td>June 2022 - August 2022</td>
+            </tr>
+            <tr>
+                <td>CyberSecure Ltd.</td>
+                <td>Junior Security Analyst</td>
+                <td>September 2022 - Present</td>
+            </tr>
+        </table>
+    </section>
+    <h3>Registration Form</h3>
+    <section id="registration">
+        <form>
+            <fieldset>
+                <!-- <legend> is the title of the fieldset. -->
+                <legend>Personal Information</legend>
+
+                <!-- Personal fields -->
+                <!--  full Name -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50">
+                <br>
+                <br>
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+                <!-- Age -->
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" minlength="18" maxlength="70">
+            </fieldset>
+
+            <fieldset>
+                <legend>Employment Information</legend>
+
+                <!-- Employment fields go here -->
+                <!-- Hire date -->
+                <label for="hire">Hire Date: </label>
+                <input id="hire" type="date" name="hire">
+                <br>
+                <br>
+                <!-- Employee	Code -->
+                <label for="EmployeeCode">Employee Code: </label>
+                <input id="EmployeeCode" type="text" name="EmployeeCode" pattern="[A-Z]{2}[0-9]{4}">
+                <br>
+                <br>
+                <!-- Department -->
+                <label for="Department">Department: </label>
+                <select id="Department">
+                    <option>IT</option>
+                    <option>HR</option>
+                    <option>Finance</option>
+                </select>
+                <br>
+                <br>
+                <!-- Employment type -->
+                <!-- Both radio buttons use the same name, so the user can choose only one -->
+                <label>
+                    <input type="radio" name="employment">
+                    Full Time
+                </label>
+
+                <label>
+                    <input type="radio" name="employment">
+                    Part Time
+                </label>
+                <br>
+                <br>
+                <!--Benefits  -->
+                <label>
+
+                    <input type="checkbox">
+
+                    Health Insurance
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Transportation
+
+                </label>
+                <br>
+                <br>
+                <!-- Bio -->
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="5" cols="40"></textarea>
+                <br>
+                <br>
+                <!-- Resume -->
+                <label for="resume">Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                <br>
+                <br>
+                <!-- Employee ID -->
+                <label for="employeeId">Employee ID:</label>
+                <input type="text" id="employeeId" name="employeeId" value="EMP001" readonly>
+                <br>
+                <br>
+                <!-- Legacy Field -->
+                <label for="legacy">Legacy Field:</label>
+                <input type="text" id="legacy" name="legacy" value="Legacy Employee" disabled>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+<footer>
+    <p>&copy; 2026 Noor Alhuda Al Busaidi. All rights reserved.</p>
+
+    <a href="#top">Back to Top</a>
+</footer>
+</body>
+
+</html>
