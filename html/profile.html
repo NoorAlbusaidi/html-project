@@ -127,6 +127,53 @@
                 </select>
                 <br>
                 <br>
+                <!-- Employment type -->
+                <!-- Both radio buttons use the same name, so the user can choose only one -->
+                <label>
+                    <input type="radio" name="employment">
+                    Full Time
+                </label>
+
+                <label>
+                    <input type="radio" name="employment">
+                    Part Time
+                </label>
+                <br>
+                <br>
+                <!--Benefits  -->
+                <label>
+
+                    <input type="checkbox">
+
+                    Health Insurance
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Transportation
+
+                </label>
+                <br>
+                <br>
+                <!-- Bio -->
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="5" cols="40"></textarea>
+                <br>
+                <br>
+                <!-- Resume -->
+                <label for="resume">Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                <br>
+                <br>
+                <!-- Employee ID -->
+                <input type="text" value="EMP001" readonly>
+                <br>
+                <br>
+                <!-- Legacy Field -->
+                <input type="text" value="Old Employee" disabled>
             </fieldset>
         </form>
     </section>
