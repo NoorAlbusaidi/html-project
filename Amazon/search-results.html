@@ -30,29 +30,76 @@
 
         </nav>
         <asid>
-            <h2>Filters :</h2>
-            <h3>Brands</h3>
+            <form>
+                <h2>Filters :</h2>
+                <h3>Brands</h3>
 
-            <input type="checkbox" id="brand1" name="brand" value="Apple">
-            <label for="brand1">Apple</label><br>
+                <input type="checkbox" id="brand1" name="brand" value="Apple">
+                <label for="brand1">Apple</label><br>
 
-            <input type="checkbox" id="brand2" name="brand" value="Sony">
-            <label for="brand2">Sony</label><br>
+                <input type="checkbox" id="brand2" name="brand" value="Sony">
+                <label for="brand2">Sony</label><br>
 
-            <input type="checkbox" id="brand3" name="brand" value="Samsung">
-            <label for="brand3">Samsung</label><br>
+                <input type="checkbox" id="brand3" name="brand" value="Samsung">
+                <label for="brand3">Samsung</label><br>
 
-            <h3>Customer Rating</h3>
-            <input type="radio" id="4stars" name="rating" value="4stars">
-            <label for="4stars">4 stars & up</label><br>
+                <h3>Customer Rating</h3>
+                <input type="radio" id="4stars" name="rating" value="4stars">
+                <label for="4stars">4 stars & up</label><br>
 
-            <input type="radio" id="3stars" name="rating" value="3stars">
-            <label for="3stars">3 stars & up</label><br>
+                <input type="radio" id="3stars" name="rating" value="3stars">
+                <label for="3stars">3 stars & up</label><br>
 
-            <input type="radio" id="2stars" name="rating" value="2stars">
-            <label for="2stars">2 Stars & Up</label>
+                <input type="radio" id="2stars" name="rating" value="2stars">
+                <label for="2stars">2 Stars & Up</label>
+                <br><br>
+                <label for="minPrice">Min Price:</label>
+                <input type="number" id="minPrice" name="minPrice">
+                <br><br>
+                <label for="maxPrice">Max Price:</label>
+                <input type="number" id="maxPrice" name="maxPrice">
+                <br><br>
+                <button type="submit">Apply Filters</button>
+            </form>
         </asid>
+        <section>
 
+            <p>Showing 20 out of 120 results</p>
+
+            <label for="sort">Sort By</label>
+
+            <select id="sort" name="sort">
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Customer Reviews</option>
+                <option>Newest Arrivals</option>
+            </select>
+
+        </section>
+        <br><br>
+        <article>
+
+    <img src="headphones.jpg"
+         alt="Wireless Headphones"
+         width="150"
+         height="150">
+
+    <h3>
+        <a href="#">Wireless Bluetooth Headphones</a>
+    </h3>
+
+    <p>
+        ★★★★☆ (4.5 out of 5)
+        <br>
+        2,154 reviews
+    </p>
+
+    <p>Price: $89.99</p>
+
+    <p>FREE delivery Tomorrow</p>
+
+</article>
     </body>
 
     </html>
