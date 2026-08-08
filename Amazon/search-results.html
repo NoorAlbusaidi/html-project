@@ -183,21 +183,60 @@
 
     </form>
 </aside>
-        <section>
+<section style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+">
 
-            <p>Showing 20 out of 120 results</p>
+    <p style="
+        margin: 0;
+        color: #555;
+        font-size: 15px;
+    ">
+        Showing <strong style="color: #131921;">20</strong> out of
+        <strong style="color: #131921;">120</strong> results
+    </p>
 
-            <label for="sort">Sort By</label>
+    <div style="
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    ">
 
-            <select id="sort" name="sort">
-                <option>Featured</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Customer Reviews</option>
-                <option>Newest Arrivals</option>
-            </select>
+        <label for="sort" style="
+            font-weight: bold;
+            color: #131921;
+        ">
+            Sort By:
+        </label>
 
-        </section>
+        <select id="sort" name="sort" style="
+            padding: 10px 35px 10px 12px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            background-color: white;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+        ">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Customer Reviews</option>
+            <option>Newest Arrivals</option>
+        </select>
+
+    </div>
+
+</section>
         <br><br>
         <article>
             <h3><strong><mark>Sponsored</mark></strong></h3>
