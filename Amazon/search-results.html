@@ -3,7 +3,15 @@
 
     <head>
 
+        <style>
+            nav a {
+                transition: 0.3s;
+            }
 
+            nav a:hover {
+                background-color: #e8f0ff;
+            }
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Search</title>
@@ -42,10 +50,41 @@
                     🔍 Search
                 </button>
             </form>
-            <nav>
-                <a href="#">Account</a> |
-                <a href="#">Orders</a> |
-                <a href="#">Cart</a>
+            <nav style="
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+">
+                <a href="#" style="
+        color:  #131921;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 10px;
+    ">
+                    Account
+                </a>
+
+                <a href="#" style="
+        color:  #131921;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 10px;
+    ">
+                    Orders
+                </a>
+
+                <a href="#" style="
+        color: #131921;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 10px;
+    ">
+                    Cart 🛒
+                </a>
             </nav>
         </header>
         <nav aria-label="Breadcrumb">
@@ -57,39 +96,93 @@
             <span>Headphones</span>
 
         </nav>
-        <asid>
-            <form>
-                <h2>Filters :</h2>
-                <h3>Brands</h3>
+<aside style="
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+">
 
-                <input type="checkbox" id="brand1" name="brand" value="Apple">
-                <label for="brand1">Apple</label><br>
+    <form>
 
-                <input type="checkbox" id="brand2" name="brand" value="Sony">
-                <label for="brand2">Sony</label><br>
+        <h2 style="
+            color: #131921;
+            margin-top: 0;
+            border-bottom: 2px solid #febd69;
+            padding-bottom: 10px;
+        ">
+            Filters
+        </h2>
 
-                <input type="checkbox" id="brand3" name="brand" value="Samsung">
-                <label for="brand3">Samsung</label><br>
+        <h3 style="color: #131921;">Brands</h3>
 
-                <h3>Customer Rating</h3>
-                <input type="radio" id="4stars" name="rating" value="4stars">
-                <label for="4stars">4 stars & up</label><br>
+        <input type="checkbox" id="brand1" name="brand" value="Apple">
+        <label for="brand1">Apple</label><br><br>
 
-                <input type="radio" id="3stars" name="rating" value="3stars">
-                <label for="3stars">3 stars & up</label><br>
+        <input type="checkbox" id="brand2" name="brand" value="Sony">
+        <label for="brand2">Sony</label><br><br>
 
-                <input type="radio" id="2stars" name="rating" value="2stars">
-                <label for="2stars">2 Stars & Up</label>
-                <br><br>
-                <label for="minPrice">Min Price:</label>
-                <input type="number" id="minPrice" name="minPrice">
-                <br><br>
-                <label for="maxPrice">Max Price:</label>
-                <input type="number" id="maxPrice" name="maxPrice">
-                <br><br>
-                <button type="submit">Apply Filters</button>
-            </form>
-        </asid>
+        <input type="checkbox" id="brand3" name="brand" value="Samsung">
+        <label for="brand3">Samsung</label>
+
+        <h3 style="color: #131921; margin-top: 25px;">
+            Customer Rating
+        </h3>
+
+        <input type="radio" id="4stars" name="rating" value="4stars">
+        <label for="4stars">4 stars & up</label><br><br>
+
+        <input type="radio" id="3stars" name="rating" value="3stars">
+        <label for="3stars">3 stars & up</label><br><br>
+
+        <input type="radio" id="2stars" name="rating" value="2stars">
+        <label for="2stars">2 stars & up</label>
+
+        <h3 style="color: #131921; margin-top: 25px;">
+            Price
+        </h3>
+
+        <label for="minPrice">Min Price:</label>
+        <input type="number" id="minPrice" name="minPrice" style="
+            width: 90px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        ">
+
+        <br><br>
+
+        <label for="maxPrice">Max Price:</label>
+        <input type="number" id="maxPrice" name="maxPrice" style="
+            width: 90px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        ">
+
+        <br><br>
+
+        <button type="submit" style="
+            width: 100%;
+            padding: 12px;
+            background-color: #febd69;
+            color: #131921;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        ">
+            Apply Filters
+        </button>
+
+    </form>
+</aside>
         <section>
 
             <p>Showing 20 out of 120 results</p>
