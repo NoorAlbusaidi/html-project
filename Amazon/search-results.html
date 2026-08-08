@@ -15,6 +15,79 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Search</title>
+        <style>
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+        margin: 10px 0;
+    }
+
+    .product-card h3 a {
+        color: #131921;
+        text-decoration: none;
+    }
+
+    .product-card h3 a:hover {
+        color: #0066ff;
+    }
+
+    .rating {
+        color: #f5a623;
+        font-size: 16px;
+    }
+
+    .reviews {
+        color: #555;
+        font-size: 14px;
+    }
+
+    .price {
+        color: #b12704;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .delivery {
+        color: #067d62;
+        font-size: 14px;
+    }
+
+    .sponsored {
+        display: inline-block;
+        background-color: #febd69;
+        color: #131921;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 13px;
+    }
+</style>
     </head>
 
     <body>
@@ -87,15 +160,45 @@
                 </a>
             </nav>
         </header>
-        <nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" style="
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+">
 
-            <a href="#">Home</a> >
+    <a href="#" style="
+        color: #131921;
+        text-decoration: none;
+        font-weight: bold;
+    ">
+        Home
+    </a>
 
-            <a href="#">Electronics</a> >
+    <span style="color: #888;">›</span>
 
-            <span>Headphones</span>
+    <a href="#" style="
+        color: #131921;
+        text-decoration: none;
+        font-weight: bold;
+    ">
+        Electronics
+    </a>
 
-        </nav>
+    <span style="color: #888;">›</span>
+
+    <span style="
+        color: #666;
+    ">
+        Headphones
+    </span>
+
+</nav>
 <aside style="
     width: 250px;
     background-color: #ffffff;
@@ -238,149 +341,242 @@
 
 </section>
         <br><br>
-        <article>
-            <h3><strong><mark>Sponsored</mark></strong></h3>
-            <img src="headphones.jpg" alt="Wireless Headphones" width="150" height="150">
+        <div class="products">
 
-            <h3>
-                <a href="#">Wireless Bluetooth Headphones</a>
-            </h3>
+    <article class="product-card">
 
-            <p>
-                ★★★★☆ (4.5 out of 5)
-                <br>
-                2,154 reviews
-            </p>
+        <span class="sponsored">Sponsored</span>
 
-            <p>Price: $89.99</p>
+        <img src="headphones.jpg" alt="Wireless Headphones">
 
-            <p>FREE delivery Tomorrow</p>
+        <h3>
+            <a href="#">Wireless Bluetooth Headphones</a>
+        </h3>
 
-        </article>
-        <br><br>
-        <article>
+        <p class="rating">
+            ★★★★☆ (4.5 out of 5)
+        </p>
 
-            <img src="mouse.jpg" alt="Wireless Mouse" width="150" height="150">
+        <p class="reviews">2,154 reviews</p>
 
-            <h3>
-                <a href="#">Wireless Bluetooth Mouse</a>
-            </h3>
+        <p class="price">$89.99</p>
 
-            <p>
-                ★★★★☆ (4 out of 5)
-                <br>
-                2,100 reviews
-            </p>
+        <p class="delivery">FREE delivery Tomorrow</p>
 
-            <p>Price:$49.99</p>
+    </article>
 
-            <p>FREE delivery Friday</p>
 
-        </article>
-        <br><br>
-        <article>
+    <article class="product-card">
 
-            <img src="watch.jpg" alt="Smart Watch" width="150" height="150">
+        <img src="mouse.jpg" alt="Wireless Mouse">
 
-            <h3>
-                <a href="#">Smart Watch</a>
-            </h3>
+        <h3>
+            <a href="#">Wireless Bluetooth Mouse</a>
+        </h3>
 
-            <p>
-                ★★★★☆ (4.6/5)
-                <br>
-                1,321 reviews
-            </p>
+        <p class="rating">
+            ★★★★☆ (4 out of 5)
+        </p>
 
-            <p>Price: $159.99</p>
+        <p class="reviews">2,100 reviews</p>
 
-            <p>FREE delivery Tomorrow</p>
+        <p class="price">$49.99</p>
 
-        </article>
-        <br><br>
-        <article>
+        <p class="delivery">FREE delivery Friday</p>
 
-            <img src="keyboard.jpg" alt="Mechanical Keyboard" width="150" height="150">
+    </article>
 
-            <h3>
-                <a href="#">Mechanical Keyboard</a>
-            </h3>
 
-            <p>
-                ★★★★☆ (4.7/5)
-                <br>
-                856 reviews
-            </p>
+    <article class="product-card">
 
-            <p>Price: $69.99</p>
+        <img src="watch.jpg" alt="Smart Watch">
 
-            <p>Delivery Saturday</p>
+        <h3>
+            <a href="#">Smart Watch</a>
+        </h3>
 
-        </article>
-        <br><br>
-        <article>
+        <p class="rating">
+            ★★★★☆ (4.6/5)
+        </p>
 
-            <img src="speaker.jpg" alt="Wireless Speaker" width="150" height="150">
+        <p class="reviews">1,321 reviews</p>
 
-            <h3>
-                <a href="#">Wireless Speaker</a>
-            </h3>
+        <p class="price">$159.99</p>
 
-            <p>
-                ★★★★☆ (4.4/5)
-                <br>
-                1,705 reviews
-            </p>
+        <p class="delivery">FREE delivery Tomorrow</p>
 
-            <p>Price: $59.99</p>
+    </article>
 
-            <p>FREE delivery Thursday</p>
 
-        </article>
-        <br><br>
-        <article>
+    <article class="product-card">
 
-            <img src="usb.jpg" alt="USB-C Fast Charger" width="150" height="150">
+        <img src="keyboard.jpg" alt="Mechanical Keyboard">
 
-            <h3>
-                <a href="#">USB-C Fast Charger</a>
-            </h3>
+        <h3>
+            <a href="#">Mechanical Keyboard</a>
+        </h3>
 
-            <p>
-                ★★★★★ (4.9/5)
-                <br>
-                3,248 reviews
-            </p>
+        <p class="rating">
+            ★★★★☆ (4.7/5)
+        </p>
 
-            <p>Price: $24.99</p>
+        <p class="reviews">856 reviews</p>
 
-            <p>FREE delivery Tomorrow</p>
+        <p class="price">$69.99</p>
 
-        </article>
-        <br><br>
-        <nav aria-label="Pagination">
-            <a href="#">Previous</a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> 1 </a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> 2 </a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> 3 </a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> Next </a>
-        </nav>
-        <footer>
-            <p>
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Terms of Service</a> |
-                <a href="#">Contact Us</a>
-            </p>
-            <p>&copy; 2026 Amazon.com, Inc. or its affiliates.</p>
-        </footer>
+        <p class="delivery">Delivery Saturday</p>
+
+    </article>
+
+
+    <article class="product-card">
+
+        <img src="speaker.jpg" alt="Wireless Speaker">
+
+        <h3>
+            <a href="#">Wireless Speaker</a>
+        </h3>
+
+        <p class="rating">
+            ★★★★☆ (4.4/5)
+        </p>
+
+        <p class="reviews">1,705 reviews</p>
+
+        <p class="price">$59.99</p>
+
+        <p class="delivery">FREE delivery Thursday</p>
+
+    </article>
+
+
+    <article class="product-card">
+
+        <img src="usb.jpg" alt="USB-C Fast Charger">
+
+        <h3>
+            <a href="#">USB-C Fast Charger</a>
+        </h3>
+
+        <p class="rating">
+            ★★★★★ (4.9/5)
+        </p>
+
+        <p class="reviews">3,248 reviews</p>
+
+        <p class="price">$24.99</p>
+
+        <p class="delivery">FREE delivery Tomorrow</p>
+
+    </article>
+
+</div>
+<nav aria-label="Pagination" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 30px 0;
+">
+
+    <a href="#" style="
+        padding: 10px 18px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        Previous
+    </a>
+
+    <a href="#" style="
+        padding: 10px 15px;
+        color: white;
+        background-color: #131921;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        1
+    </a>
+
+    <a href="#" style="
+        padding: 10px 15px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        2
+    </a>
+
+    <a href="#" style="
+        padding: 10px 15px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        3
+    </a>
+
+    <a href="#" style="
+        padding: 10px 18px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        Next
+    </a>
+
+</nav>
+<footer style="
+    background-color: #131921;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+">
+
+    <p style="margin: 0 0 15px 0;">
+        <a href="#" style="
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        ">Privacy Policy</a>
+
+        |
+
+        <a href="#" style="
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        ">Terms of Service</a>
+
+        |
+
+        <a href="#" style="
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        ">Contact Us</a>
+    </p>
+
+    <p style="
+        margin: 0;
+        color: #cccccc;
+        font-size: 14px;
+    ">
+        &copy; 2026 Amazon.com, Inc. or its affiliates.
+    </p>
+
+</footer>
     </body>
 
     </html>
