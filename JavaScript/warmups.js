@@ -1,10 +1,10 @@
 const name = "Noor Alhuda";
 let number = 0;
 
-let sum = 5;
-let sumTypeBefore = typeof sum; // "number"
-let sum = "five";
-let sumTypeAfter = typeof sum; // "string"
+let value = 5;
+let sumTypeBefore = typeof value; // "number"
+value = "five";
+let sumTypeAfter = typeof value; // "string"
 
 const equality = 10 == "10"; // true, because the string is converted to a number
 const strictEquality = 10 === "10"; // false, because the types are different
