@@ -1,3 +1,4 @@
+// LOCAL DATA
 const products = [
     {
         name: "Laptop",
@@ -36,3 +37,37 @@ const products = [
         category: "Accessories"
     }
 ];
+
+// ARROW FUNCTION
+// Creates one Bootstrap product card
+const renderProductCard = (product) => {
+    return `
+        <div class="col-12 col-md-4 mb-3">
+
+            <div class="card h-100">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        ${product.name}
+                    </h5>
+
+                    <p class="card-text">
+                        <strong>Price:</strong> $${product.price}
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Stock:</strong> ${product.stock}
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Category:</strong> ${product.category}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    `;
+};
