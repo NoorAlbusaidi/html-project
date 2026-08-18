@@ -2,225 +2,581 @@
     <html lang="en">
 
     <head>
+
+        <style>
+            nav a {
+                transition: 0.3s;
+            }
+
+            nav a:hover {
+                background-color: #e8f0ff;
+            }
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Search</title>
+        <style>
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+        margin: 10px 0;
+    }
+
+    .product-card h3 a {
+        color: #131921;
+        text-decoration: none;
+    }
+
+    .product-card h3 a:hover {
+        color: #0066ff;
+    }
+
+    .rating {
+        color: #f5a623;
+        font-size: 16px;
+    }
+
+    .reviews {
+        color: #555;
+        font-size: 14px;
+    }
+
+    .price {
+        color: #b12704;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .delivery {
+        color: #067d62;
+        font-size: 14px;
+    }
+
+    .sponsored {
+        display: inline-block;
+        background-color: #febd69;
+        color: #131921;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 13px;
+    }
+</style>
     </head>
 
     <body>
         <header>
-            <h1>Shop smart with Amazon</h1>
-            <form action="search-results.html" method="get">
-                <input type="text" name="query" placeholder="Search for products...">
-                <button type="submit">Search</button>
+            <h1 style=" color: #ffffff; font-size: 42px; font-family: Arial, sans-serif; font-weight: bold; text-align: center;
+                padding: 20px;background-color: #131921;">Shop smart with Amazon</h1>
+            <form action="search-results.html" method="get" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 700px;
+">
+                <input type="text" name="query" placeholder="Search for products..." style="
+        flex: 1;
+        padding: 15px 20px;
+        font-size: 16px;
+        border: 2px solid black;
+        border-radius: 30px 0 0 30px;
+        outline: none;
+    ">
+
+                <button type="submit" style="
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        background-color: #febd69;
+        color: #131921;
+        cursor: pointer;
+    ">
+                    🔍 Search
+                </button>
             </form>
-            <nav>
-                <a href="#">Account</a> |
-                <a href="#">Orders</a> |
-                <a href="#">Cart</a>
+            <nav style="
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+">
+                <a href="#" style="
+        color:  #131921;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 10px;
+    ">
+                    Account
+                </a>
+
+                <a href="#" style="
+        color:  #131921;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 10px;
+    ">
+                    Orders
+                </a>
+
+                <a href="#" style="
+        color: #131921;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 24px;
+        border-radius: 10px;
+    ">
+                    Cart 🛒
+                </a>
             </nav>
         </header>
-        <nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" style="
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+">
 
-            <a href="#">Home</a> >
+    <a href="#" style="
+        color: #131921;
+        text-decoration: none;
+        font-weight: bold;
+    ">
+        Home
+    </a>
 
-            <a href="#">Electronics</a> >
+    <span style="color: #888;">›</span>
 
-            <span>Headphones</span>
+    <a href="#" style="
+        color: #131921;
+        text-decoration: none;
+        font-weight: bold;
+    ">
+        Electronics
+    </a>
 
-        </nav>
-        <asid>
-            <form>
-                <h2>Filters :</h2>
-                <h3>Brands</h3>
+    <span style="color: #888;">›</span>
 
-                <input type="checkbox" id="brand1" name="brand" value="Apple">
-                <label for="brand1">Apple</label><br>
+    <span style="
+        color: #666;
+    ">
+        Headphones
+    </span>
 
-                <input type="checkbox" id="brand2" name="brand" value="Sony">
-                <label for="brand2">Sony</label><br>
+</nav>
+<aside style="
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+">
 
-                <input type="checkbox" id="brand3" name="brand" value="Samsung">
-                <label for="brand3">Samsung</label><br>
+    <form>
 
-                <h3>Customer Rating</h3>
-                <input type="radio" id="4stars" name="rating" value="4stars">
-                <label for="4stars">4 stars & up</label><br>
+        <h2 style="
+            color: #131921;
+            margin-top: 0;
+            border-bottom: 2px solid #febd69;
+            padding-bottom: 10px;
+        ">
+            Filters
+        </h2>
 
-                <input type="radio" id="3stars" name="rating" value="3stars">
-                <label for="3stars">3 stars & up</label><br>
+        <h3 style="color: #131921;">Brands</h3>
 
-                <input type="radio" id="2stars" name="rating" value="2stars">
-                <label for="2stars">2 Stars & Up</label>
-                <br><br>
-                <label for="minPrice">Min Price:</label>
-                <input type="number" id="minPrice" name="minPrice">
-                <br><br>
-                <label for="maxPrice">Max Price:</label>
-                <input type="number" id="maxPrice" name="maxPrice">
-                <br><br>
-                <button type="submit">Apply Filters</button>
-            </form>
-        </asid>
-        <section>
+        <input type="checkbox" id="brand1" name="brand" value="Apple">
+        <label for="brand1">Apple</label><br><br>
 
-            <p>Showing 20 out of 120 results</p>
+        <input type="checkbox" id="brand2" name="brand" value="Sony">
+        <label for="brand2">Sony</label><br><br>
 
-            <label for="sort">Sort By</label>
+        <input type="checkbox" id="brand3" name="brand" value="Samsung">
+        <label for="brand3">Samsung</label>
 
-            <select id="sort" name="sort">
-                <option>Featured</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Customer Reviews</option>
-                <option>Newest Arrivals</option>
-            </select>
+        <h3 style="color: #131921; margin-top: 25px;">
+            Customer Rating
+        </h3>
 
-        </section>
+        <input type="radio" id="4stars" name="rating" value="4stars">
+        <label for="4stars">4 stars & up</label><br><br>
+
+        <input type="radio" id="3stars" name="rating" value="3stars">
+        <label for="3stars">3 stars & up</label><br><br>
+
+        <input type="radio" id="2stars" name="rating" value="2stars">
+        <label for="2stars">2 stars & up</label>
+
+        <h3 style="color: #131921; margin-top: 25px;">
+            Price
+        </h3>
+
+        <label for="minPrice">Min Price:</label>
+        <input type="number" id="minPrice" name="minPrice" style="
+            width: 90px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        ">
+
         <br><br>
-        <article>
-            <h3><strong><mark>Sponsored</mark></strong></h3>
-            <img src="headphones.jpg" alt="Wireless Headphones" width="150" height="150">
 
-            <h3>
-                <a href="#">Wireless Bluetooth Headphones</a>
-            </h3>
+        <label for="maxPrice">Max Price:</label>
+        <input type="number" id="maxPrice" name="maxPrice" style="
+            width: 90px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        ">
 
-            <p>
-                ★★★★☆ (4.5 out of 5)
-                <br>
-                2,154 reviews
-            </p>
-
-            <p>Price: $89.99</p>
-
-            <p>FREE delivery Tomorrow</p>
-
-        </article>
         <br><br>
-        <article>
 
-            <img src="mouse.jpg" alt="Wireless Mouse" width="150" height="150">
+        <button type="submit" style="
+            width: 100%;
+            padding: 12px;
+            background-color: #febd69;
+            color: #131921;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        ">
+            Apply Filters
+        </button>
 
-            <h3>
-                <a href="#">Wireless Bluetooth Mouse</a>
-            </h3>
+    </form>
+</aside>
+<section style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+">
 
-            <p>
-                ★★★★☆ (4 out of 5)
-                <br>
-                2,100 reviews
-            </p>
+    <p style="
+        margin: 0;
+        color: #555;
+        font-size: 15px;
+    ">
+        Showing <strong style="color: #131921;">20</strong> out of
+        <strong style="color: #131921;">120</strong> results
+    </p>
 
-            <p>Price:$49.99</p>
+    <div style="
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    ">
 
-            <p>FREE delivery Friday</p>
+        <label for="sort" style="
+            font-weight: bold;
+            color: #131921;
+        ">
+            Sort By:
+        </label>
 
-        </article>
+        <select id="sort" name="sort" style="
+            padding: 10px 35px 10px 12px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            background-color: white;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+        ">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Customer Reviews</option>
+            <option>Newest Arrivals</option>
+        </select>
+
+    </div>
+
+</section>
         <br><br>
-        <article>
+        <div class="products">
 
-            <img src="watch.jpg" alt="Smart Watch" width="150" height="150">
+    <article class="product-card">
 
-            <h3>
-                <a href="#">Smart Watch</a>
-            </h3>
+        <span class="sponsored">Sponsored</span>
 
-            <p>
-                ★★★★☆ (4.6/5)
-                <br>
-                1,321 reviews
-            </p>
+        <img src="headphones.jpg" alt="Wireless Headphones">
 
-            <p>Price: $159.99</p>
+        <h3>
+            <a href="#">Wireless Bluetooth Headphones</a>
+        </h3>
 
-            <p>FREE delivery Tomorrow</p>
+        <p class="rating">
+            ★★★★☆ (4.5 out of 5)
+        </p>
 
-        </article>
-        <br><br>
-        <article>
+        <p class="reviews">2,154 reviews</p>
 
-            <img src="keyboard.jpg" alt="Mechanical Keyboard" width="150" height="150">
+        <p class="price">$89.99</p>
 
-            <h3>
-                <a href="#">Mechanical Keyboard</a>
-            </h3>
+        <p class="delivery">FREE delivery Tomorrow</p>
 
-            <p>
-                ★★★★☆ (4.7/5)
-                <br>
-                856 reviews
-            </p>
+    </article>
 
-            <p>Price: $69.99</p>
 
-            <p>Delivery Saturday</p>
+    <article class="product-card">
 
-        </article>
-        <br><br>
-        <article>
+        <img src="mouse.jpg" alt="Wireless Mouse">
 
-            <img src="speaker.jpg" alt="Wireless Speaker" width="150" height="150">
+        <h3>
+            <a href="#">Wireless Bluetooth Mouse</a>
+        </h3>
 
-            <h3>
-                <a href="#">Wireless Speaker</a>
-            </h3>
+        <p class="rating">
+            ★★★★☆ (4 out of 5)
+        </p>
 
-            <p>
-                ★★★★☆ (4.4/5)
-                <br>
-                1,705 reviews
-            </p>
+        <p class="reviews">2,100 reviews</p>
 
-            <p>Price: $59.99</p>
+        <p class="price">$49.99</p>
 
-            <p>FREE delivery Thursday</p>
+        <p class="delivery">FREE delivery Friday</p>
 
-        </article>
-        <br><br>
-        <article>
+    </article>
 
-            <img src="usb.jpg" alt="USB-C Fast Charger" width="150" height="150">
 
-            <h3>
-                <a href="#">USB-C Fast Charger</a>
-            </h3>
+    <article class="product-card">
 
-            <p>
-                ★★★★★ (4.9/5)
-                <br>
-                3,248 reviews
-            </p>
+        <img src="watch.jpg" alt="Smart Watch">
 
-            <p>Price: $24.99</p>
+        <h3>
+            <a href="#">Smart Watch</a>
+        </h3>
 
-            <p>FREE delivery Tomorrow</p>
+        <p class="rating">
+            ★★★★☆ (4.6/5)
+        </p>
 
-        </article>
-        <br><br>
-        <nav aria-label="Pagination">
-            <a href="#">Previous</a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> 1 </a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> 2 </a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> 3 </a>
-            &nbsp;
-            &nbsp;
-            <a href="#"> Next </a>
-        </nav>
-        <footer>
-            <p>
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Terms of Service</a> |
-                <a href="#">Contact Us</a>
-            </p>
-            <p>&copy; 2026 Amazon.com, Inc. or its affiliates.</p>
-        </footer>
+        <p class="reviews">1,321 reviews</p>
+
+        <p class="price">$159.99</p>
+
+        <p class="delivery">FREE delivery Tomorrow</p>
+
+    </article>
+
+
+    <article class="product-card">
+
+        <img src="keyboard.jpg" alt="Mechanical Keyboard">
+
+        <h3>
+            <a href="#">Mechanical Keyboard</a>
+        </h3>
+
+        <p class="rating">
+            ★★★★☆ (4.7/5)
+        </p>
+
+        <p class="reviews">856 reviews</p>
+
+        <p class="price">$69.99</p>
+
+        <p class="delivery">Delivery Saturday</p>
+
+    </article>
+
+
+    <article class="product-card">
+
+        <img src="speaker.jpg" alt="Wireless Speaker">
+
+        <h3>
+            <a href="#">Wireless Speaker</a>
+        </h3>
+
+        <p class="rating">
+            ★★★★☆ (4.4/5)
+        </p>
+
+        <p class="reviews">1,705 reviews</p>
+
+        <p class="price">$59.99</p>
+
+        <p class="delivery">FREE delivery Thursday</p>
+
+    </article>
+
+
+    <article class="product-card">
+
+        <img src="usb.jpg" alt="USB-C Fast Charger">
+
+        <h3>
+            <a href="#">USB-C Fast Charger</a>
+        </h3>
+
+        <p class="rating">
+            ★★★★★ (4.9/5)
+        </p>
+
+        <p class="reviews">3,248 reviews</p>
+
+        <p class="price">$24.99</p>
+
+        <p class="delivery">FREE delivery Tomorrow</p>
+
+    </article>
+
+</div>
+<nav aria-label="Pagination" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 30px 0;
+">
+
+    <a href="#" style="
+        padding: 10px 18px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        Previous
+    </a>
+
+    <a href="#" style="
+        padding: 10px 15px;
+        color: white;
+        background-color: #131921;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        1
+    </a>
+
+    <a href="#" style="
+        padding: 10px 15px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        2
+    </a>
+
+    <a href="#" style="
+        padding: 10px 15px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        3
+    </a>
+
+    <a href="#" style="
+        padding: 10px 18px;
+        color: #131921;
+        text-decoration: none;
+        border: 1px solid #131921;
+        border-radius: 8px;
+        font-weight: bold;
+    ">
+        Next
+    </a>
+
+</nav>
+<footer style="
+    background-color: #131921;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+">
+
+    <p style="margin: 0 0 15px 0;">
+        <a href="#" style="
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        ">Privacy Policy</a>
+
+        |
+
+        <a href="#" style="
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        ">Terms of Service</a>
+
+        |
+
+        <a href="#" style="
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        ">Contact Us</a>
+    </p>
+
+    <p style="
+        margin: 0;
+        color: #cccccc;
+        font-size: 14px;
+    ">
+        &copy; 2026 Amazon.com, Inc. or its affiliates.
+    </p>
+
+</footer>
     </body>
 
     </html>
