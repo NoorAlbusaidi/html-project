@@ -73,6 +73,11 @@ const isEvenArrow = (number) => {
     }
 };
 
+// Calling all three with the same input
+console.log(isEvenDeclaration(4)); // true
+console.log(isEvenExpression(4));  // true
+console.log(isEvenArrow(4));       // true
+
 
 
 
