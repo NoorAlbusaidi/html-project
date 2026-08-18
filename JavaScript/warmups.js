@@ -91,3 +91,20 @@ function sum(...numbers) {
 }
 
 console.log(sum(1, 2, 3, 4)); // 10
+
+const person = {
+  name: "Noor",
+
+  // Regular function
+  getNameRegular: function () {
+    return this.name;
+  },
+
+  // Arrow function
+  getNameArrow: () => {
+    return this.name;
+  }
+};
+
+console.log(person.getNameRegular());
+console.log(person.getNameArrow());
