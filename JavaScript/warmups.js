@@ -78,7 +78,16 @@ console.log(isEvenDeclaration(4)); // true
 console.log(isEvenExpression(4));  // true
 console.log(isEvenArrow(4));       // true
 
+function greet(name = "Guest") {
+    return `Hello, ${name}`;
+}
 
+console.log(greet());       // Hello, Guest
+console.log(greet("Noor")); // Hello, Noor
 
+// 5. Function with a Rest Parameter
+function sum(...numbers) {
+    return numbers.reduce((total, number) => total + number, 0);
+}
 
-
+console.log(sum(1, 2, 3, 4)); // 10
