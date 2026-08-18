@@ -48,19 +48,32 @@ console.log(grade); // Output: B
 
 // 1. Function Declaration
 function isEvenDeclaration(number) {
-  if (number % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // 2. Function Expression
 const isEvenExpression = function (number) {
-  if (number % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
 };
+
+// 3. Arrow Function
+const isEvenArrow = (number) => {
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+
+
+
 
