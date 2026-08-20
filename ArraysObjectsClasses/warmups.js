@@ -44,3 +44,9 @@ const inStoreOrders = [201, 202, 203, 204];
 
 const allOrdersIds = [...onlineOrders, ...inStoreOrders];
 console.log(allOrdersIds); 
+
+const updatedOrders = {...order, status: "Cancelled"};
+
+console.log("Original order:", order);
+console.log("Updated order:", updatedOrders);
+
