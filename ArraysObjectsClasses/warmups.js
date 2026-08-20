@@ -31,3 +31,9 @@ const {id,customer,...rest} = order;
 console.log(id); // 101
 console.log(customer); // Sara Ahmed
 console.log(rest); // { total: 249.99, status: 'Shipped' }  
+
+function summary({id,customer,total,status}){
+    return `Order ${id} for ${customer} is ${status}. Total: $${total}`;
+}
+
+console.log(summary(order));
