@@ -1,4 +1,7 @@
+// ============================================
 // LOCAL DATA
+// ============================================
+
 const products = [
     {
         name: "Laptop",
@@ -38,8 +41,12 @@ const products = [
     }
 ];
 
+
+// ============================================
 // ARROW FUNCTION
 // Creates one Bootstrap product card
+// ============================================
+
 const renderProductCard = (product) => {
     return `
         <div class="col-12 col-md-4 mb-3">
@@ -71,3 +78,106 @@ const renderProductCard = (product) => {
         </div>
     `;
 };
+
+
+// ============================================
+// REGULAR FUNCTION DECLARATION
+// Renders products on the page
+// ============================================
+
+function renderProducts(productsToRender) {
+
+    document.getElementById("productList").innerHTML =
+        productsToRender
+            .map(renderProductCard)
+            .join("");
+}
+
+
+// ============================================
+// COMPUTED SUMMARY
+// Using a plain for...of loop
+// ============================================
+
+let totalInventoryValue = 0;
+let lowStockCount = 0;
+
+for (const product of products) {
+
+    // Add price × stock
+    totalInventoryValue =
+        totalInventoryValue + (product.price * product.stock);
+
+    // Count products with stock below 10
+    if (product.stock < 10) {
+        lowStockCount = lowStockCount + 1;
+    }
+}
+
+
+// Display total inventory value
+document.getElementById("totalValue").textContent =
+    `$${totalInventoryValue}`;
+
+
+// Display low stock count
+document.getElementById("lowStockCount").textContent =
+    lowStockCount;
+
+
+// ============================================
+// INITIAL RENDER
+// Show all products when page loads
+// ============================================
+
+renderProducts(products);
+
+
+// ============================================
+// INTERACTIVE TOGGLE
+// ============================================
+
+let showingLowStockOnly = false;
+
+const toggleButton =
+    document.getElementById("toggleButton");
+
+
+toggleButton.addEventListener("click", function () {
+
+    if (showingLowStockOnly) {
+
+        // Show all products
+        renderProducts(products);
+
+        toggleButton.textContent =
+            "Show Low Stock Only";
+
+        showingLowStockOnly = false;
+
+    } else {
+
+        // Create an array for low-stock products
+        const lowStockProducts = [];
+
+
+        // Use a plain loop
+        for (const product of products) {
+
+            if (product.stock < 10) {
+                lowStockProducts.push(product);
+            }
+
+        }
+
+
+        // Render only low-stock products
+        renderProducts(lowStockProducts);
+
+        toggleButton.textContent =
+            "Show All Products";
+
+        showingLowStockOnly = true;
+    }
+
+});
