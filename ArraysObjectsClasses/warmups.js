@@ -11,7 +11,15 @@ console.log(cities);
 console.log(cities.length); // 6
 // Add a duplicate city
 cities.push("Muscat"); // at the end
-
 console.log(cities.length); // 7
-
 console.log(cities);
+
+for(let i =0; i < cities.length; i++){
+    console.log(cities[i]);
+}
+
+for(const city of cities){
+    console.log(city);
+}
+
+
