@@ -8,3 +8,10 @@ console.log(cities);
 cities.shift();
 console.log(cities);
 
+console.log(cities.length); // 6
+// Add a duplicate city
+cities.push("Muscat"); // at the end
+
+console.log(cities.length); // 7
+
+console.log(cities);
