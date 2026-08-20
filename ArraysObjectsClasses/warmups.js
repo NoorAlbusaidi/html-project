@@ -37,3 +37,10 @@ function summary({id,customer,total,status}){
 }
 
 console.log(summary(order));
+
+const onlineOrders = [101, 102, 103, 104];
+
+const inStoreOrders = [201, 202, 203, 204];
+
+const allOrdersIds = [...onlineOrders, ...inStoreOrders];
+console.log(allOrdersIds); 
