@@ -50,3 +50,8 @@ const updatedOrders = {...order, status: "Cancelled"};
 console.log("Original order:", order);
 console.log("Updated order:", updatedOrders);
 
+function sum(...numbers){
+    return numbers;
+}
+
+console.log(sum(1,2,3,4,5)); //[1,2,3,4,5]
