@@ -70,5 +70,8 @@ const orders = [
 const shippedOrders = orders.reduce((sum,item)=> sum + item.total,0);
 console.log("Total of shipped orders:", shippedOrders); // Total of shipped orders: 909.98
 
-const shippedOrders = orders.filter(order => order.status === "Shipped");
-console.log(shippedOrders);
+const shippedOrdersfiltered = orders.filter(order => order.status === "Shipped");
+console.log(shippedOrdersfiltered); // [{ id: 101, customer: "Sara Ahmed", total: 249.99, status: "Shipped
+
+const customerNames = orders.map(order => order.customer);
+console.log(customerNames);
