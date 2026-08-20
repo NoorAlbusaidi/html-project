@@ -79,3 +79,17 @@ console.log(customerNames);
 const firstOrderOver200 = orders.find(order => order.total > 200);
 console.log(firstOrderOver200);
 
+// Is ANY order cancelled?
+const hasCancelledOrder = orders.some(
+    order => order.status === "Cancelled"
+);
+
+console.log(hasCancelledOrder); // true
+
+
+// Do ALL orders have a total greater than 0?
+const allOrdersPositive = orders.every(
+    order => order.total > 0
+);
+
+console.log(allOrdersPositive); // true
