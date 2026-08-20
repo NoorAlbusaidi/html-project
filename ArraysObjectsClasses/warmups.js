@@ -75,3 +75,7 @@ console.log(shippedOrdersfiltered); // [{ id: 101, customer: "Sara Ahmed", total
 
 const customerNames = orders.map(order => order.customer);
 console.log(customerNames);
+
+const firstOrderOver200 = orders.find(order => order.total > 200);
+console.log(firstOrderOver200);
+
