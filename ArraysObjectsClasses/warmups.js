@@ -27,7 +27,7 @@ const	order	=	{	id:	101,	customer:	"Sara	Ahmed",	total:	249.99,	status:	"Shipped
 const {customer,total} = order;
 console.log(customer); // Sara Ahmed
 console.log(total); // 249.99
-const {id,customer,...rest} = order;
+const {id,name,...rest} = order;
 console.log(id); // 101
 console.log(customer); // Sara Ahmed
 console.log(rest); // { total: 249.99, status: 'Shipped' }  
