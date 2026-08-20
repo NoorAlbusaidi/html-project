@@ -55,3 +55,20 @@ function sum(...numbers){
 }
 
 console.log(sum(1,2,3,4,5)); //[1,2,3,4,5]
+
+const orders = [
+    { id: 101, customer: "Sara Ahmed", total: 249.99, status: "Shipped" },
+    { id: 102, customer: "Noor Ali", total: 150.00, status: "Pending" },
+    { id: 103, customer: "Omar Khan", total: 320.50, status: "Delivered" },
+    { id: 104, customer: "Fatma Ali", total: 99.99, status: "Cancelled" },
+    { id: 105, customer: "Ahmed Said", total: 450.00, status: "Shipped" },
+    { id: 106, customer: "Layla Hassan", total: 75.50, status: "Pending" },
+    { id: 107, customer: "Khalid Noor", total: 180.25, status: "Delivered" },
+    { id: 108, customer: "Mariam Ali", total: 210.00, status: "Shipped" }
+];
+
+const shippedOrders = orders.reduce((sum,item)=> sum + item.total,0);
+console.log("Total of shipped orders:", shippedOrders); // Total of shipped orders: 909.98
+
+const shippedOrders = orders.filter(order => order.status === "Shipped");
+console.log(shippedOrders);
