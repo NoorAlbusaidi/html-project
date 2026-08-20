@@ -93,3 +93,6 @@ const allOrdersPositive = orders.every(
 );
 
 console.log(allOrdersPositive); // true
+
+const sortOrders = [...orders].sort((a,b) => a.total - b.total);
+console.log(sortOrders);
