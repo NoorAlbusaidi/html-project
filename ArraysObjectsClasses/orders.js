@@ -1,3 +1,5 @@
+let selectedStatus = "All";
+let searchText = "";
 const orders = [
     {
         id: 1,
