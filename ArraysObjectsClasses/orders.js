@@ -188,3 +188,13 @@ const everyOrderHasItems = orders.every(
 );
 
 console.log("every Order Has Items: "+everyOrderHasItems);
+
+const topCustomers = [...orders]
+    .sort((a, b) => getOrderTotal(b) - getOrderTotal(a))
+    .slice(0, 3)
+    .map(order => ({
+        customer: order.customer,
+        total: getOrderTotal(order)
+    }));
+
+console.log(topCustomers);
