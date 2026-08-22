@@ -142,8 +142,8 @@ const orders = [
 ];
 
 function getOrderTotal(order) {
-    return order.items.reduce((total, item) => 
-       total + item.price * item.quantity,0);
+    return order.items.reduce((total, item) =>
+        total + item.price * item.quantity, 0);
 }
 
 const sum = getOrderTotal(orders[1]);
@@ -155,4 +155,36 @@ const totalRevenue = orders.reduce(
     0
 );
 
-console.log(totalRevenue);
+console.log("Total revenue: " + totalRevenue);
+
+const pendingCount = orders.filter(
+    order => order.status === "Pending"
+).length;
+
+const shippedCount = orders.filter(
+    order => order.status === "Shipped"
+).length;
+
+const cancelledCount = orders.filter(
+    order => order.status === "Cancelled"
+).length;
+
+console.log("Pending: " + pendingCount);
+console.log("Shipped: " + shippedCount);
+console.log("Cancelled: " + cancelledCount);
+
+const highestOrder = orders.reduce((highest, order) => {
+    return getOrderTotal(order) > getOrderTotal(highest)
+        ? order
+        : highest;
+});
+
+console.log("customer of highest order: " + highestOrder.customer);
+console.log("the highest order price: " + getOrderTotal(highestOrder));
+
+// Check whether every order has at least one item
+const everyOrderHasItems = orders.every(
+    order => order.items.length > 0
+);
+
+console.log("every Order Has Items: "+everyOrderHasItems);
