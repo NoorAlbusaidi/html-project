@@ -140,3 +140,13 @@ const orders = [
         ]
     }
 ];
+
+function getOrderTotal(order) {
+    return order.items.reduce((total, item) => 
+       total + item.price * item.quantity,0);
+}
+
+const sum = getOrderTotal(orders[1]);
+console.log(sum);
+
+// total revenue
