@@ -150,3 +150,9 @@ const sum = getOrderTotal(orders[1]);
 console.log(sum);
 
 // total revenue
+const totalRevenue = orders.reduce(
+    (total, order) => total + getOrderTotal(order),
+    0
+);
+
+console.log(totalRevenue);
